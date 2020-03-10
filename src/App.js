@@ -1,12 +1,14 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import moviesFromServer from './api/movies';
+import MoviesList from './components/MoviesList/MoviesList';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
+export const App = () => (
+  <div className="page">
+    <div className="page-content">
+      <MoviesList movies={moviesFromServer} />
     </div>
-  );
-}
 
-export default App;
+    <div className="sidebar">Sidebar will be here</div>
+  </div>
+);
